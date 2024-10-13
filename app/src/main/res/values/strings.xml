@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Zameen</string>
+    <!-- Add this array -->
+    <string-array name="country_codes">
+        <item>+1 USA</item>
+        <item>+44 UK</item>
+        <item>+91 India</item>
+        <item>+92 Pakistan</item>
+        <!-- Add other country codes as needed -->
+    </string-array>
+</resources>

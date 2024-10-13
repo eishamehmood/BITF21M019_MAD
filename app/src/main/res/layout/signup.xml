@@ -1,0 +1,166 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/zameen_icon"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/tvLoginDescription"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/zameen_icon" />
+
+    <!-- Google Sign-up Button -->
+    <Button
+        android:id="@+id/google_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/green_outline_button"
+        android:drawablePadding="8dp"
+        android:src="@drawable/ic_profile_icon"
+        android:text="Sign Up with Google"
+        android:textAllCaps="false"
+        android:textColor="@color/facebook_blue" />
+
+    <!-- Facebook Sign-up Button -->
+    <Button
+        android:id="@+id/facebook_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/green_outline_button"
+        android:drawableStart="@drawable/ic_facebook"
+        android:drawablePadding="8dp"
+        android:text="Sign Up with Facebook"
+        android:textAllCaps="false"
+        android:textColor="@color/facebook_blue" />
+
+    <!-- OR Separator -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"
+        android:paddingVertical="8dp"
+        android:text="OR"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Name Input -->
+    <EditText
+        android:id="@+id/signup_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Name*"
+        android:inputType="textPersonName"
+        android:padding="12dp" />
+
+    <!-- Email Input -->
+    <EditText
+        android:id="@+id/signup_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Email*"
+        android:inputType="textEmailAddress"
+        android:padding="12dp" />
+
+    <!-- Password Input -->
+    <EditText
+        android:id="@+id/signup_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Password*"
+        android:inputType="textPassword"
+        android:padding="12dp" />
+
+    <!-- Confirm Password Input -->
+    <EditText
+        android:id="@+id/signup_confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Confirm Password*"
+        android:inputType="textPassword"
+        android:padding="12dp" />
+
+    <!-- Phone Number Input -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal">
+
+        <!-- Country Code -->
+        <TextView
+            android:id="@+id/signup_country_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:text="+92" />
+
+        <!-- Phone Number Input -->
+        <EditText
+            android:id="@+id/signup_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Phone Number*"
+            android:inputType="phone"
+            android:padding="12dp" />
+    </LinearLayout>
+
+    <!-- Terms and Conditions -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/signup_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I have read and agree to the "
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/signup_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:linksClickable="true"
+            android:text="Terms and Conditions"
+            android:textColor="@color/seagreen" />
+    </LinearLayout>
+
+    <!-- Continue Button -->
+    <Button
+        android:id="@+id/signup_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/light_gray"
+        android:enabled="false"
+        android:text="Continue"
+        android:textColor="@android:color/black" />
+</LinearLayout>

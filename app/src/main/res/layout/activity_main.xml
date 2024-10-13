@@ -1,0 +1,139 @@
+<!-- res/layout/activity_login.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/zameen_icon"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/tvLoginDescription"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/zameen_icon" />
+
+    <!-- Google Sign-in Button -->
+    <Button
+        android:id="@+id/btn_google_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_google"
+        android:drawablePadding="8dp"
+        android:background="@drawable/green_outline_button"
+        android:text="Continue with Google"
+        android:textColor="@color/facebook_blue"
+        android:textAllCaps="false"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Facebook Sign-in Button -->
+    <Button
+        android:id="@+id/btn_facebook_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_facebook"
+        android:drawablePadding="8dp"
+        android:background="@drawable/green_outline_button"
+        android:text="Continue with Facebook"
+        android:textColor="@color/facebook_blue"
+        android:textAllCaps="false"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- OR Separator -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OR"
+        android:layout_gravity="center"
+        android:paddingVertical="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Email Input -->
+    <EditText
+        android:id="@+id/input_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email*"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Password Input -->
+    <EditText
+        android:id="@+id/input_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password*"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Log In Button -->
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:backgroundTint="@color/light_gray"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Remember Me and Forgot Password Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="8dp"
+        android:layout_marginBottom="12dp">
+
+        <!-- Remember Me -->
+        <CheckBox
+            android:id="@+id/checkbox_remember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember Me"/>
+
+        <!-- Forgot Password -->
+        <TextView
+            android:id="@+id/forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
+
+    <!-- Sign Up Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ARE YOU NEW TO ZAMEEN?"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Sign Up Button -->
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/green_outline_button"
+        android:text="Sign Up"
+        android:textColor="@color/green"
+        android:textAllCaps="false"
+        android:layout_marginBottom="12dp"/>
+
+</LinearLayout>
