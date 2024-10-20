@@ -1,42 +1,54 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/profile"
+    android:background="@color/white"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivMenuicon"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="false"
+        android:layout_marginLeft="-234dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/menu_icon" />
 
     <TextView
         android:id="@+id/tvProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
         android:text="Profile"
         android:textSize="24sp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="16dp" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/tvProfile"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="34dp"
         android:text="Log in"
         android:textSize="18sp"
-        android:layout_marginLeft="10dp"
-        android:layout_below="@id/tvProfile"
-        android:layout_marginTop="8dp"
-        android:layout_alignParentLeft="true"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvLoginDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:text="Log in to your account"
-        android:textSize="16sp"
         android:layout_below="@id/tvLogin"
-        android:layout_marginTop="4dp"
         android:layout_alignParentLeft="true"
-        android:textColor="@android:color/holo_green_dark"/>
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:text="Log in to your account"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="16sp" />
 
     <ImageView
         android:id="@+id/ivProfileIcon"
@@ -45,95 +57,238 @@
         android:layout_below="@id/tvLoginDescription"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="-62dp"
-        android:layout_marginRight="-310dp"
+        android:layout_marginTop="-55dp"
+        android:layout_marginRight="-294dp"
         android:src="@drawable/ic_profile_icon" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="8dp"
+        android:background="#D3D3D3" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_below="@id/ivProfileIcon"
         android:layout_marginTop="16dp"
+        android:orientation="vertical"
         android:padding="16dp">
 
-        <TextView
-            android:id="@+id/tvLanguage"
-            android:layout_width="wrap_content"
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="#D3D3D3" />
+
+        <!-- Row for icon and language text -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Language"
-            android:textSize="16sp"/>
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/language_icon"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Language"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
 
         <TextView
             android:id="@+id/tvLanguageValue"
-            android:layout_width="wrap_content"
+            android:layout_width="206dp"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLanguage"
+            android:layout_marginTop="4dp"
             android:text="English"
-            android:textSize="16sp"
             android:textColor="@android:color/holo_green_dark"
-            android:layout_marginTop="4dp"/>
+            android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/tvContactUs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Contact Us"
-            android:textSize="16sp"
-            android:layout_marginTop="16dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="-2dp"
+            android:background="#D3D3D3" />
 
-        <TextView
-            android:id="@+id/tvFeedback"
-            android:layout_width="wrap_content"
+        <!-- Row for icon and language text -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Feedback"
-            android:textSize="16sp"
-            android:layout_marginTop="16dp"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
 
-        <TextView
-            android:id="@+id/tvInviteFriends"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Invite Friends to Zameen"
-            android:textSize="16sp"
-            android:layout_marginTop="16dp"/>
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/contactus_icon"
+                android:layout_marginEnd="8dp" />
 
-        <TextView
-            android:id="@+id/tvTermsPrivacy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Terms and Privacy Policy"
-            android:textSize="16sp"
-            android:layout_marginTop="16dp"/>
+            <TextView
+                android:id="@+id/tvContactUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Us"
+                android:textSize="16sp" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvAppVersion"
-            android:layout_width="wrap_content"
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="-2dp"
+            android:background="#D3D3D3" />
+        <!-- Row for icon and language text -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="App Version"
-            android:textSize="16sp"
-            android:layout_marginTop="16dp"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/feedback_icon"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvFeedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feedback"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="-2dp"
+            android:background="#D3D3D3" />
+        <!-- Row for icon and language text -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/invite_icon"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvInviteFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invite Friends to Zameen"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="-2dp"
+            android:background="#D3D3D3" />
+        <!-- Row for icon and language text -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/terms_icon"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvTermsPrivacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terms and Privacy Policy"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="-2dp"
+            android:background="#D3D3D3" />
+        <!-- Row for icon and language text -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/about_icon"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvAppVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="App Version"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+
 
         <TextView
             android:id="@+id/tvAppVersionValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:text="4.6.3"
-            android:textSize="16sp"
-            android:layout_marginTop="4dp"/>
+            android:textSize="16sp" />
 
 
     </LinearLayout>
 
 
+    <!-- Log In Button -->
+
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Log In"
-        android:textColor="@color/white"
-        android:background="@drawable/green_outline_button"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"/>
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="121dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
 </RelativeLayout>

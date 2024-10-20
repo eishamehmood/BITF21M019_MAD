@@ -4,63 +4,77 @@
     android:id="@+id/signup"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     android:padding="12dp"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/zameen_icon"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_below="@id/tvLoginDescription"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/zameen_icon" />
-
-    <!-- Google Sign-up Button -->
-    <Button
-        android:id="@+id/google_signup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/green_outline_button"
-        android:drawablePadding="8dp"
-        android:src="@drawable/ic_profile_icon"
-        android:text="Sign Up with Google"
-        android:textAllCaps="false"
-        android:textColor="@color/facebook_blue" />
-
-    <!-- Facebook Sign-up Button -->
-    <Button
-        android:id="@+id/facebook_signup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/green_outline_button"
-        android:drawableStart="@drawable/ic_facebook"
-        android:drawablePadding="8dp"
-        android:text="Sign Up with Facebook"
-        android:textAllCaps="false"
-        android:textColor="@color/facebook_blue" />
-
-    <!-- OR Separator -->
+    <!-- Horizontal Line (Divider) -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:paddingVertical="8dp"
+        android:text="Become a Free Member"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="8dp"
+        android:background="#D3D3D3" />
+
+
+    <ImageView
+        android:id="@+id/zameen_icon"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_below="@id/tvLoginDescription"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/signup_icon" />
+
+    <!-- Horizontal Line (Divider) -->
+
+
+    <TextView
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingVertical="8dp"
+        android:text="Sell or Rent Your Property"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_gravity="center"
+        android:paddingVertical="8dp"
+        android:layout_marginBottom="-19dp"
+        android:text="Easily List Your Property and Reach Millions of"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
         android:layout_gravity="center"
         android:layout_marginBottom="12dp"
         android:paddingVertical="8dp"
-        android:text="OR"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:text="Potential Buyers and Renters"
+        android:textSize="16sp" />
+
+
 
     <!-- Name Input -->
     <EditText
         android:id="@+id/signup_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/rounded_edittext"
-        android:hint="Name*"
+        android:hint="Your Name"
         android:inputType="textPersonName"
         android:padding="12dp" />
 
@@ -69,9 +83,9 @@
         android:id="@+id/signup_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/rounded_edittext"
-        android:hint="Email*"
+        android:hint="Email Address"
         android:inputType="textEmailAddress"
         android:padding="12dp" />
 
@@ -82,20 +96,10 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:background="@drawable/rounded_edittext"
-        android:hint="Password*"
+        android:hint="Password"
         android:inputType="textPassword"
         android:padding="12dp" />
 
-    <!-- Confirm Password Input -->
-    <EditText
-        android:id="@+id/signup_confirm_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/rounded_edittext"
-        android:hint="Confirm Password*"
-        android:inputType="textPassword"
-        android:padding="12dp" />
 
     <!-- Phone Number Input -->
     <LinearLayout
@@ -120,47 +124,71 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_edittext"
-            android:hint="Phone Number*"
+            android:hint="Phone Number"
             android:inputType="phone"
             android:padding="12dp" />
     </LinearLayout>
 
-    <!-- Terms and Conditions -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:orientation="horizontal">
-
-        <CheckBox
-            android:id="@+id/signup_terms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="I have read and agree to the "
-            android:textColor="@android:color/black" />
-
-        <TextView
-            android:id="@+id/signup_terms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:linksClickable="true"
-            android:text="Terms and Conditions"
-            android:textColor="@color/seagreen" />
-    </LinearLayout>
-
-    <!-- Continue Button -->
     <Button
-        android:id="@+id/signup_continue"
+        android:id="@+id/btn_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:backgroundTint="@color/light_gray"
-        android:enabled="false"
-        android:text="Continue"
-        android:textColor="@android:color/black" />
+        android:layout_below="@+id/signup_phone"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Register Now"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Sign Up Link -->
+    <TextView
+        android:id="@+id/signup_link1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_signup"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="20dp"
+        android:text="Already a member? "
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/signup_link"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-26dp"
+        android:layout_marginLeft="65dp"
+        android:gravity="center"
+        android:text="Log In Instead"
+        android:textColor="@color/green"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_marginBottom="-19dp"
+        android:paddingVertical="8dp"
+        android:text='By pressing "Register Now" I declare that I have read'
+        android:textColor="#686464"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:paddingVertical="8dp"
+        android:text='and I agree to the zameen.com Terms &amp;  \n conditions'
+        android:textColor="#817F7F"
+        android:textSize="16sp" />
+
+
+
+
 </LinearLayout>
