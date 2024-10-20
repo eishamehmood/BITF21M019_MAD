@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".search">
+
+    <TextView
+        android:id="@+id/filtersText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Filters"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/filtersText"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="#D3D3D3" />
+
+    <LinearLayout
+        android:id="@+id/rent_buy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view1"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- TextView aligned to the left -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="I want to"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- RadioGroup aligned to the right -->
+        <RadioGroup
+            android:id="@+id/buyRentToggle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/buyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buy" />
+
+            <RadioButton
+                android:id="@+id/rentButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Rent" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/rent_buy"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="#D3D3D3" />
+
+    <TextView
+        android:id="@+id/cityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view2"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="City"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/cityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cityLabel"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Lahore"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/cityName"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="#D3D3D3" />
+
+    <TextView
+        android:id="@+id/propertyTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view3"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Property Types"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Tabs (Homes, Plots, Commercial) -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutPropertyType_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/propertyTypeLabel"
+        app:tabGravity="fill"
+        android:layout_marginBottom="30dp"
+        app:tabMode="fixed">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabHomes_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Homes"
+            android:textSize="16sp" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabPlots_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plots"
+            android:textSize="16sp" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabCommercial_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Commercial"
+            android:textSize="16sp" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- Filter Buttons (Popular, Type, Location, Area Size) -->
+    <LinearLayout
+        android:id="@+id/property_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabLayoutPropertyType_search"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnall_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:padding="8dp"
+            android:text="All"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnhouse_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:padding="8dp"
+            android:text="House"
+            android:textColor="#878585" />
+
+
+        <Button
+            android:id="@+id/btnflat_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:padding="8dp"
+            android:text="Flat"
+            android:textColor="#878585" />
+
+        <Button
+            android:id="@+id/btnupperportion_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:padding="8dp"
+            android:text="Upper Portion"
+            android:textColor="#878585" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/property_options"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="#D3D3D3" />
+
+    <TextView
+        android:id="@+id/priceRangeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view4"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Price Range"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/price_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/priceRangeLabel"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/priceMin"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TO" />
+
+        <EditText
+            android:id="@+id/priceMax"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Any"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/price_input"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="#D3D3D3" />
+
+    <LinearLayout
+        android:id="@+id/search_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view5"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/resetButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Reset"
+            android:textColor="#595757"
+            android:textSize="20sp"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <Button
+            android:id="@+id/showAdsButton"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="Show 1000+ Ads"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#2D8A31"
+            android:padding="8dp" />
+    </LinearLayout>
+
+</RelativeLayout>
