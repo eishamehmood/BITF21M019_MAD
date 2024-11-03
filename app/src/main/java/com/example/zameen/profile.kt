@@ -1,10 +1,15 @@
 package com.example.zameen
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.fragment.findNavController
+import com.example.zameen.databinding.FragmentProfileBinding
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +26,8 @@ class profile : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -34,7 +41,17 @@ class profile : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        val view = inflater.inflate(R.layout.fragment_profile, container, false)
+
+        // Find the login button and set the onClickListener
+        val loginButton: Button = view.findViewById(R.id.btnlogin_profile)
+        loginButton.setOnClickListener {
+            // Navigate to LoginActivity
+            val intent = Intent(activity, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        return view
     }
 
     companion object {

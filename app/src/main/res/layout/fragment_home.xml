@@ -57,7 +57,7 @@
                             android:id="@+id/icon_two"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:contentDescription="@string/icon_two_desc"
+                            android:contentDescription="string/icon_two_desc"
                             android:src="@drawable/searchicon" />
                     </LinearLayout>
 
@@ -177,23 +177,29 @@
                         android:id="@+id/btnType"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="#FFFFFF"
                         android:padding="8dp"
-                        android:text="Type" />
+                        android:text="Type"
+                        android:textColor="#807D7D" />
 
 
                     <Button
                         android:id="@+id/btnLocation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="#FFFFFF"
                         android:padding="8dp"
-                        android:text="Location" />
+                        android:text="Location"
+                        android:textColor="#807D7D" />
 
                     <Button
                         android:id="@+id/btnAreaSize"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="#FFFFFF"
                         android:padding="8dp"
-                        android:text="Area Size" />
+                        android:text="Area Size"
+                        android:textColor="#807D7D" />
                 </LinearLayout>
 
                 <!-- Grid of Options -->
@@ -303,8 +309,8 @@
                                 android:layout_height="wrap_content"
                                 android:text="🔍 House for Sale"
                                 android:textColor="@color/blue"
-                                android:textSize="14sp" <!-- Ensure this color is defined -->
-                            android:layout_marginBottom="4dp"/>
+                                android:textSize="14sp"
+                                android:layout_marginBottom="4dp"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -345,8 +351,8 @@
                                 android:layout_height="wrap_content"
                                 android:text="🔍 House for Sale"
                                 android:textColor="@color/blue"
-                                android:textSize="14sp" <!-- Ensure this color is defined -->
-                            android:layout_marginBottom="4dp"/>
+                                android:textSize="14sp"
+                                android:layout_marginBottom="4dp"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -387,8 +393,8 @@
                                 android:layout_height="wrap_content"
                                 android:text="🔍 House for Sale"
                                 android:textColor="@color/blue"
-                                android:textSize="14sp" <!-- Ensure this color is defined -->
-                            android:layout_marginBottom="4dp"/>
+                                android:textSize="14sp"
+                                android:layout_marginBottom="4dp"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -569,7 +575,7 @@
                     android:layout_height="wrap_content">
 
 
-                    <ImageView
+                    <!--<ImageView
                         android:id="@+id/mapImage"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -579,7 +585,7 @@
                         android:layout_alignParentBottom="true"
                         android:contentDescription="Map"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/images" />
+                        android:src="@drawable/images" />-->
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -719,12 +725,12 @@
                             android:orientation="vertical"
                             android:padding="16dp">
 
-                            <ImageView
+                           <!-- <ImageView
                                 android:layout_width="100dp"
                                 android:layout_height="100dp"
                                 android:layout_marginBottom="8dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/" />
+                                android:src="@drawable/" />-->
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -764,12 +770,12 @@
                             android:orientation="vertical"
                             android:padding="16dp">
 
-                            <ImageView
+                            <!--<ImageView
                                 android:layout_width="100dp"
                                 android:layout_height="100dp"
                                 android:layout_marginBottom="8dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/" />
+                                android:src="@drawable/" />-->
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -807,12 +813,12 @@
                             android:orientation="vertical"
                             android:padding="16dp">
 
-                            <ImageView
+                           <!-- <ImageView
                                 android:layout_width="100dp"
                                 android:layout_height="100dp"
                                 android:layout_marginBottom="8dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/" />
+                                android:src="@drawable/" />-->
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -903,7 +909,7 @@
                                 android:layout_height="80dp"
                                 android:layout_marginBottom="8dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/fbr_logo" />
+                                android:src="@drawable/ic_facebook" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -929,12 +935,12 @@
                             android:orientation="vertical"
                             android:padding="8dp">
 
-                            <ImageView
+                            <!--<ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="80dp"
                                 android:layout_marginBottom="8dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/dha_logo" />
+                                android:src="@drawable/dha_logo" />-->
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -960,12 +966,12 @@
                             android:orientation="vertical"
                             android:padding="8dp">
 
-                            <ImageView
+                            <!--<ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="80dp"
                                 android:layout_marginBottom="8dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/zameen_logo" />
+                                android:src="@drawable/zameen_logo" />-->
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -1014,7 +1020,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/homeicon"
+                            android:src="@drawable/homeicon"/>
 
                     </LinearLayout>
 
@@ -1027,7 +1033,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/houseicon"
+                            android:src="@drawable/houseicon"/>
 
                     </LinearLayout>
 
@@ -1040,7 +1046,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/likeicon"
+                            android:src="@drawable/likeicon"/>
 
                     </LinearLayout>
 
@@ -1053,7 +1059,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/profileicon"
+                            android:src="@drawable/profileicon"/>
 
                     </LinearLayout>
 

@@ -1,3 +1,4 @@
+
 package com.example.zameen
 
 import android.os.Bundle
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide();
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         replacefragment(Home())
@@ -45,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
     //method to replace framents for the navigation
     private fun replacefragment(fragment: Fragment){
-       val fragmentManager=supportFragmentManager
+        val fragmentManager=supportFragmentManager
         val framenttransaction= fragmentManager.beginTransaction()
         framenttransaction.replace(R.id.frame_layout,fragment)
         framenttransaction.commit()

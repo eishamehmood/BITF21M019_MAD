@@ -258,7 +258,7 @@
     </LinearLayout>
 
 
-    <!-- List item view for project details -->
+    <!--!&#45;&#45; List item view for project details &ndash;&gt;
     <LinearLayout
         android:id="@+id/project_details2"
         android:layout_width="match_parent"
@@ -270,7 +270,7 @@
         android:orientation="horizontal"
         android:padding="10dp">
 
-        <!-- Project Image -->
+        &lt;!&ndash; Project Image &ndash;&gt;
         <ImageView
             android:id="@+id/project_image2"
             android:layout_width="0dp"
@@ -279,7 +279,7 @@
             android:scaleType="centerCrop"
             android:src="@drawable/project2" />
 
-        <!-- Description layout -->
+        &lt;!&ndash; Description layout &ndash;&gt;
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -374,7 +374,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- List item view for project details -->
+    &lt;!&ndash; List item view for project details &ndash;&gt;
     <LinearLayout
         android:id="@+id/project_details3"
         android:layout_width="match_parent"
@@ -386,7 +386,7 @@
         android:orientation="horizontal"
         android:padding="10dp">
 
-        <!-- Project Image -->
+        &lt;!&ndash; Project Image &ndash;&gt;
         <ImageView
             android:id="@+id/project_image3"
             android:layout_width="0dp"
@@ -395,7 +395,7 @@
             android:scaleType="centerCrop"
             android:src="@drawable/project3" />
 
-        <!-- Description layout -->
+        &lt;!&ndash; Description layout &ndash;&gt;
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -488,7 +488,7 @@
                     android:textColor="@color/white" />
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+    </LinearLayout>-->
 
 
 </RelativeLayout>
