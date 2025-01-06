@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+
+
+
+        <item android:title="Home"
+            android:id="@+id/navhome_icon"
+            android:icon="@drawable/homeicon1"/>
+        <item android:title="Projects"
+            android:id="@+id/navproject_icon"
+            android:icon="@drawable/projects_icon1"/>
+        <item android:title="Search"
+            android:icon="@drawable/searchicon1"
+            android:id="@+id/navsearch_icon"/>
+        <item android:title="Favorites"
+            android:id="@+id/navfavorites_icon"
+            android:icon="@drawable/fav1"/>
+        <item android:title="Profile"
+            android:id="@+id/navprofile_icon"
+            android:icon="@drawable/profile1"/>
+
+        <item android:title="English"
+            android:id="@+id/navlanguage_icon"
+            android:icon="@drawable/language_icon1"/>
+        <item android:title="Settings"
+            android:id="@+id/navsettings_icon"
+            android:icon="@drawable/settingicon"/>
+        <item android:title="About Us"
+            android:id="@+id/navAboutus_icon"
+            android:icon="@drawable/about_icon1"/>
+        <item android:title="Contact Us"
+            android:id="@+id/navContactus_icon"
+            android:icon="@drawable/contactus_icon1"/>
+        <item android:title="Terms &amp; Privacy Policy"
+            android:id="@+id/navTerms_icon"
+            android:icon="@drawable/terms_icon1"/>
+    </group>
+
+
+
+
+</menu>

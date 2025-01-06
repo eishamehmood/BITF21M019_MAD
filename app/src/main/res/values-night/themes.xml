@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Zameen_MAD" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+    <style name="Theme.Zameen_MAD" parent="Base.Theme.Zameen_MAD">
+        <!-- Customize toolbar title color -->
+        <item name="toolbarStyle">@style/CustomToolbar</item>
+    </style>
+
+    <!-- Custom toolbar style to set text color -->
+    <style name="CustomToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextColor">@color/white</item> <!-- Set toolbar text color -->
+        <item name="subtitleTextColor">@color/white
+        </item> <!-- If using a subtitle, set its color too -->
+    </style>
+</resources>

@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddHomeActivity"
+    android:id="@+id/addhome"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        <!-- Header Section -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:background="#E0F7EC"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+
+
+            <!-- Back Icon -->
+           <ImageView
+                android:id="@+id/back_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/baseline_arrow_back_ios_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post an Ad"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/back_icon"
+                android:layout_marginTop="16dp" />
+
+            <!-- Clear All Text -->
+            <TextView
+                android:id="@+id/clear_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear All"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="16dp" />
+
+            <!-- Title Text -->
+
+            <!-- Subtitle Text -->
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reach thousands of buyers and tenants in a few steps."
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                android:layout_marginTop="8dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--&lt;!&ndash; Purpose Section &ndash;&gt;
+        <LinearLayout
+            android:id="@+id/purpose_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/header_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="16dp">
+
+           &lt;!&ndash; &lt;!&ndash; Purpose Icon &ndash;&gt;
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/purpose_icon"
+                android:layout_marginEnd="8dp" />
+
+            &lt;!&ndash; Purpose Label &ndash;&gt;
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Purpose"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginEnd="16dp" />&ndash;&gt;
+
+            &lt;!&ndash; Sell Button &ndash;&gt;
+            &lt;!&ndash;        <Button&ndash;&gt;
+            &lt;!&ndash;            android:id="@+id/btn_sell"&ndash;&gt;
+            &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;
+            &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;
+            &lt;!&ndash;            android:layout_marginEnd="8dp"&ndash;&gt;
+            &lt;!&ndash;            android:background="#4CAF50"&ndash;&gt;
+            &lt;!&ndash;            android:paddingHorizontal="16dp"&ndash;&gt;
+            &lt;!&ndash;            android:text="Sell"&ndash;&gt;
+            &lt;!&ndash;            android:textColor="#FFFFFF" />&ndash;&gt;
+
+            &lt;!&ndash; Rent Out Button &ndash;&gt;
+            &lt;!&ndash;        <Button&ndash;&gt;
+            &lt;!&ndash;            android:id="@+id/btn_rent_out"&ndash;&gt;
+            &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;
+            &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;
+            &lt;!&ndash;            android:backgroundtint="@color/dark_green"&ndash;&gt;
+            &lt;!&ndash;            android:paddingHorizontal="16dp"&ndash;&gt;
+            &lt;!&ndash;            android:text="Rent Out"&ndash;&gt;
+            &lt;!&ndash;            android:textColor="@android:color/darker_gray" />&ndash;&gt;
+        </LinearLayout>
+
+        &lt;!&ndash; Property Type Selection &ndash;&gt;
+        <TextView
+            android:id="@+id/select_property_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Property Type"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/purpose_section"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        &lt;!&ndash; Property Type Tabs &ndash;&gt;
+        <LinearLayout
+            android:id="@+id/category_tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/select_property_type">
+
+            <TextView
+                android:id="@+id/tab_homes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:drawablePadding="8dp"
+                android:padding="8dp"
+                android:text="Homes"
+                android:textColor="@color/accent_green"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tab_plots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:drawablePadding="8dp"
+                android:padding="8dp"
+                android:text="Plots"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/tab_commercial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:padding="8dp"
+                android:text="Commercial"
+                android:textColor="@android:color/darker_gray" />
+        </LinearLayout>
+
+        &lt;!&ndash; Property Type Options Grid &ndash;&gt;
+        <GridLayout
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:columnCount="3"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/category_tabs">
+
+            &lt;!&ndash; House Option &ndash;&gt;
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="House"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:background="@drawable/rounded_button_background"
+                android:textColor="@color/accent_green"
+                android:layout_margin="4dp" />
+
+            &lt;!&ndash; Flat Option &ndash;&gt;
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flat"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:background="@drawable/rounded_button_background_inactive"
+                android:textColor="@color/black"
+                android:layout_margin="4dp" />
+
+            &lt;!&ndash; Upper Portion Option &ndash;&gt;
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upper Portion"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:background="@drawable/rounded_button_background_inactive"
+                android:textColor="@color/black"
+                android:layout_margin="4dp" />
+
+            &lt;!&ndash; Lower Portion Option &ndash;&gt;
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lower Portion"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:background="@drawable/rounded_button_background_inactive"
+                android:textColor="@color/black"
+                android:layout_margin="4dp" />
+
+            &lt;!&ndash; Farm House Option &ndash;&gt;
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Farm House"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:background="@drawable/rounded_button_background_inactive"
+                android:textColor="@color/black"
+                android:layout_margin="4dp" />
+
+            &lt;!&ndash; Room Option &ndash;&gt;
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:background="@drawable/rounded_button_background_inactive"
+                android:textColor="@color/black"
+                android:layout_margin="4dp" />
+
+            &lt;!&ndash; Penthouse Option &ndash;&gt;
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Penthouse"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:background="@drawable/rounded_button_background_inactive"
+                android:textColor="@color/black"
+                android:layout_margin="4dp" />
+        </GridLayout>-->
+        <!-- City Section -->
+        <LinearLayout
+            android:id="@+id/city_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/header_background"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <!--<ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/location_ic" />--> <!-- Replace with your city icon drawable -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/addcityLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="City"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:drawableStart="@drawable/baseline_location_on_24"
+                        android:drawablePadding="6dp" />
+
+                    <ImageView
+                        android:id="@+id/addcityArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/arrow_forward_ios_24"
+                        android:contentDescription="Select City" />
+                </LinearLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/addcityName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Lahore"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textSize="16sp"  />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/selectLocationsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Select Locations"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/city_section"
+            android:textStyle="bold" />
+
+        <!-- Select Location Section -->
+        <LinearLayout
+            android:id="@+id/location_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toBottomOf="@id/city_section"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+
+
+            <LinearLayout
+                android:id="@+id/locations_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/locationEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Enter Location"
+                    android:drawableEnd="@drawable/search_icon">
+
+                </AutoCompleteTextView>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/location_text"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <!--<ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/location_ic" />--> <!-- Replace with your city icon drawable -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/addmarlaLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Area Size"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:drawableStart="@drawable/baseline_location_on_24"
+                        android:drawablePadding="6dp" />
+
+                    <ImageView
+                        android:id="@+id/addmarlaArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/arrow_forward_ios_24"
+                        android:contentDescription="Select City" />
+                </LinearLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/addselectedmarla"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="8 marla"
+                    android:textColor="#9FA09B"
+                    android:textSize="16sp"  />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <!-- Total Price Section -->
+        <LinearLayout
+            android:id="@+id/totalprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/area"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/total_price" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Price"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter amount"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:padding="8dp"
+                    android:textColorHint="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/pkr0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="PKR 0"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PRICE CHECK"
+                android:textColor="#A1A1A1"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_marginEnd="8dp"
+                android:drawableEnd="@drawable/price_check" />
+        </LinearLayout>
+
+        <!-- Installments Available Toggle -->
+        <LinearLayout
+            android:id="@+id/installments_available"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/totalprice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Installments Available"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <!-- Ready for Possession Toggle -->
+        <LinearLayout
+            android:id="@+id/posession"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/installments_available"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Ready for Possession"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/bedrooms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/posession"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/bedroom_ic" /> <!-- Replace with your bedrooms icon -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bedrooms"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="8"
+                android:layout_marginTop="8dp">
+
+                <!-- Bedroom Options -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Studio"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/rounded_button_background_inactive"
+                    android:textColor="@color/black" />
+
+                <!-- Repeat the following for each Bedroom option (1-10) -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/rounded_button_background_inactive"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/rounded_button_background_inactive"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/rounded_button_background_inactive"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/rounded_button_background_inactive"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/rounded_button_background_inactive"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/rounded_button_background_inactive"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/rounded_button_background_inactive"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/rounded_button_background_inactive"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/rounded_button_background_inactive"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/rounded_button_background_inactive"
+                    android:textColor="@color/black" />
+
+                <!-- Continue similarly for options 3-10 -->
+            </GridLayout>
+        </LinearLayout>
+
+        <!-- Bathrooms Section -->
+        <LinearLayout
+            android:id="@+id/bathrooms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/bedrooms"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/bathrooms_ic" /> <!-- Replace with your bathrooms icon -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bathrooms"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="7"
+                android:layout_marginTop="8dp">
+
+                <!-- Bath Options -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/rounded_button_background_inactive"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/rounded_button_background_inactive"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/rounded_button_background_inactive"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/rounded_button_background_inactive"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/rounded_button_background_inactive"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/rounded_button_background_inactive"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/rounded_button_background_inactive"
+                    android:textColor="@color/black" />
+
+                <!-- Continue similarly for options 4-6 -->
+            </GridLayout>
+        </LinearLayout>
+
+
+        <!-- Property Title Section -->
+        <LinearLayout
+            android:id="@+id/property_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/bathrooms"
+            tools:ignore="ExtraText">
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_title_icon" /> <!-- Replace with your title icon drawable -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Property Title"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter title e.g. Beautiful new house..."
+                    android:minHeight="48dp"
+                    android:padding="8dp"
+                    android:textColorHint="@android:color/darker_gray" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Property Description Section -->
+        <LinearLayout
+            android:id="@+id/property_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/property_title">
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_description_item" /> <!-- Replace with your description icon drawable -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Property Description"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Describe your property in detail"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:padding="8dp"
+                    android:minLines="3" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Features and Amenities Section -->
+        <LinearLayout
+            android:id="@+id/amenities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/property_description">
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_amenities_icon" /> <!-- Replace with your amenities icon drawable -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Features and Amenities"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add additional features e.g. parking spaces, waste disposal, internet etc."
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add +"
+                android:textColor="@color/green"
+                android:backgroundTint="@android:color/transparent" />
+        </LinearLayout>
+
+        <!-- Upload Images Section -->
+        <LinearLayout
+            android:id="@+id/upload_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/amenities">
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload Images of Your Property"
+                android:textSize="16sp"
+                android:textColor="@android:color/black" />
+
+            <!-- Image Upload Tips -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✓ Ads with pictures get 5x more views and leads\n✓ Upload good quality pictures with proper lighting\n✓ Cover all areas of your property"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="8dp" />
+
+            <!-- Gallery and Camera Buttons -->
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/green_dashed_background"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="From Gallery"
+                    android:backgroundTint="@color/green"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="From Camera"
+                    android:backgroundTint="@android:color/white"
+                    android:textColor="@color/green"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Email Address Section -->
+        <LinearLayout
+            android:id="@+id/email_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/upload_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Email Icon -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/mail" /> <!-- Replace with your email icon drawable -->
+
+            <!-- Email Text Section -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="bcfs21m031@pucit.edu.pk"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Contact Numbers Section -->
+        <LinearLayout
+            android:id="@+id/contact_numbers_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/email_section"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Phone Icon -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/baseline_local_phone_24" /> <!-- Replace with your phone icon drawable -->
+
+            <!-- Contact Numbers Text Section -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Numbers"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black" />
+
+                <!-- Contact Number 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/flag" /> <!-- Replace with flag icon -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+92"
+                        android:textColor="@android:color/black"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center_vertical" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:hint="301 2345678"
+                        android:inputType="phone"
+                        android:padding="8dp"
+                        android:textColorHint="@android:color/darker_gray"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </LinearLayout>
+
+                <!-- Contact Number 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/flag" /> <!-- Replace with flag icon -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+92"
+                        android:textColor="@android:color/black"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center_vertical" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:hint="3079788782"
+                        android:inputType="phone"
+                        android:padding="8dp"
+                        android:textColorHint="@android:color/darker_gray"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Save as Draft and Post Ad Buttons Section -->
+        <LinearLayout
+            android:id="@+id/buttons_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/contact_numbers_section"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save as Draft"
+                android:backgroundTint="@android:color/darker_gray"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Post Ad"
+                android:backgroundTint="@color/green"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

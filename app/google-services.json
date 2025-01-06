@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "901850457694",
+    "project_id": "zameen-3a050",
+    "storage_bucket": "zameen-3a050.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901850457694:android:73aaff7019a568a68df6cf",
+        "android_client_info": {
+          "package_name": "com.example.zameen_mad"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ1oM77vE2OhDDCgXzpFa3boDFigRKw_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

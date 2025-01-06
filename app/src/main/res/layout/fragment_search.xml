@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".search">
+
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </ScrollView>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Filters Section -->
+            <TextView
+                android:id="@+id/filtersText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filters"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/baseline_arrow_back_ios_24"
+                android:drawablePadding="4dp" />
+
+            <!-- Spacer to push "Done" to the right -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <!-- Done Section -->
+            <TextView
+                android:id="@+id/filtersTextDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Done"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="8dp"
+            android:background="#D3D3D3" />
+
+        <!-- Rent or Buy Section -->
+        <!-- Rent or Buy Section -->
+        <LinearLayout
+            android:id="@+id/rent_buy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center_vertical">
+
+            <!-- Text Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I want to"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:drawableStart="@drawable/baseline_done_all_24"
+                android:drawablePadding="6dp"/>
+
+            <!-- Spacer to push "Done" to the right -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+
+            <!-- RadioGroup Section -->
+            <RadioGroup
+                android:id="@+id/buyRentToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/buyButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buy" />
+
+                <RadioButton
+                    android:id="@+id/rentButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Rent" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="1dp"
+            android:background="#D3D3D3" />
+        <!--City section-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/cityLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="City"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/baseline_location_on_24"
+                    android:drawablePadding="6dp" />
+
+                <ImageView
+                    android:id="@+id/cityArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow_forward_ios_24"
+                    android:contentDescription="Select City" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/cityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Lahore"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="0dp"
+            android:background="#D3D3D3" />
+        <!-- Select Locations Section -->
+        <TextView
+            android:id="@+id/selectLocationsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Select Locations"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/locations_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <!--<EditText
+                android:id="@+id/locationInput"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="15dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter locations"
+                android:inputType="text"
+                android:background="@null"
+                android:backgroundTint="#010D01"/>-->
+
+            <!--<com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="Enter Location">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/locationEditText"
+                    android:layout_width="191dp"
+                    android:layout_height="50dp"
+                    android:drawableEnd="@drawable/search_icon"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+            -->
+            <AutoCompleteTextView
+                android:id="@+id/locationEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter Location"
+                android:drawableEnd="@drawable/search_icon">
+
+            </AutoCompleteTextView>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="4dp"
+            android:background="#D3D3D3" />
+
+        <!-- Property Type Section -->
+        <TextView
+            android:id="@+id/propertyTypeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Property Types"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/projects_icon"
+            android:drawablePadding="6dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!--<com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutPropertyType_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            app:tabGravity="fill"
+            app:tabMode="fixed">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabHomes_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Homes" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabPlots_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plots" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabCommercial_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Commercial" />
+        </com.google.android.material.tabs.TabLayout>-->
+
+        <!-- Filter Buttons Section -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/property_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="10dp">
+
+                <Button
+                    android:id="@+id/btnAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="All"
+                    android:backgroundTint="#EBEFEB"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:id="@+id/btnhome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Home"
+                    android:backgroundTint="#EBEFEB"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:id="@+id/btnplots"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:backgroundTint="#EBEFEB"
+                    android:text="Plots"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/btncommercial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:backgroundTint="#EBEFEB"
+                    android:text="Commercial"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/btnflat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:backgroundTint="#EBEFEB"
+                    android:text="Flat"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="0dp"
+            android:background="#D3D3D3" />
+
+        <!-- Price Range Section -->
+        <TextView
+            android:id="@+id/priceRangeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Price Range"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/baseline_price_change_24"
+            android:drawablePadding="6dp"/>
+
+        <LinearLayout
+            android:id="@+id/price_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/priceMin"
+                android:layout_width="48dp"
+                android:paddingLeft="15dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="0"
+                android:inputType="number"
+                android:backgroundTint="#828782"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="TO" />
+
+            <EditText
+                android:id="@+id/priceMax"
+                android:layout_width="48dp"
+                android:layout_weight="1"
+                android:backgroundTint="#828782"
+                android:paddingLeft="15dp"
+                android:layout_height="wrap_content"
+                android:hint="Any"
+                android:inputType="number" />
+
+
+
+        </LinearLayout>
+
+        <!--<View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/price_input"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:background="#D3D3D3" />-->
+
+        <LinearLayout
+            android:id="@+id/search_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/price_input"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/resetButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Reset"
+                android:textColor="#595757"
+                android:textSize="20sp"
+                android:background="?android:attr/selectableItemBackground" />
+
+            <Button
+                android:id="@+id/showAdsButton"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="Show 1000+ Ads"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#2D8A31"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
